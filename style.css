@@ -1,0 +1,73 @@
+:root {
+    --headerBGColour: #221e2e;
+    --headerTxtColour: #ff0000;
+    --headerTxtFocusColour: #ecf6fd;
+    --sectionColour1: #fff;
+    --sectionColour2: #e4e4f8;
+    --sectionPadding: 6vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menuNavbarIcon {
+    height: 40px;
+}
+
+.navbarStyling {
+    background-color: var(--headerBGColour);
+}
+
+.navbarButton {
+    border-color: var(--headerTxtColour) !important;
+}
+
+.navbarIconColour {
+    color: var(--headerTxtColour) !important;
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.nav-link {
+    font-weight: 600;
+    display: inline-block;
+    float: none;
+    color: var(--headerTxtColour) !important;
+}
+
+.category {
+    font-weight: 900;
+    margin-top: 3rem;
+}
+
+.cardStyling {
+    margin-top: 1rem;
+    box-shadow: 0 8px 16px 0 var(--headerBGColour);
+    width: 100%;
+    cursor: pointer;
+}
+
+.cardText {
+    width: 70%;
+    padding: 1rem 0px .5rem 2rem;
+    background-color: coral;
+}
+
+.cardImage {
+    background-color: darkgray;
+    width: 30%;
+}
+
+.cardImage img {
+    width: 100%;
+}
+
+.card-footer {
+    cursor: pointer;
+}
