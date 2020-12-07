@@ -1,0 +1,36 @@
+<script id="header-template" type="text/x-handlebars-template">
+  <nav class="navbar navbar-light navbarStyling">
+    <a href="#footer">
+      <img class="menuNavbarIcon" src="Assets\images\MenuIcon.png" alt="Menu" />
+    </a>
+    <button
+      class="navbar-toggler collapsed navbarButton"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span>
+        <i class="fa fa-bars navbarIconColour"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {{#each menuCategory}}
+        <li class="nav-item {{#if @first}} active {{/if}}">
+          <a class="nav-link" 
+            href="#{{sectionId}}"
+            onclick="menuClick()">
+            {{sectionId}}
+            {{#if @first}}
+            <span class="sr-only">(current)</span>
+            {{/if}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </nav>
+</script>

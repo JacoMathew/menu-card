@@ -1,9 +1,8 @@
 :root {
   --headerBGColour: #221e2e;
   --headerTxtColour: #ff0000;
+  --cardBGColor: #fa8686;
   --headerTxtFocusColour: #ecf6fd;
-  --sectionColour1: #fff;
-  --sectionColour2: #e4e4f8;
   --sectionPadding: 6vw;
 }
 
@@ -12,6 +11,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Section Header */
+.category{
+  font-family: 'Ranchers', cursive;;
+}
+
+/* Card Fonts */
+.cardText , .footer{
+  font-family: 'Amita', cursive;
+}
+
+.card-footer , .nav-link{
+  font-family: 'Merienda', cursive;;
+}
+
 
 .menuNavbarIcon {
   height: 40px;
@@ -45,6 +59,27 @@
   color: var(--headerTxtColour);
 }
 
+#recommend-container{
+  overflow-x: auto;
+  /* white-space: nowrap; */
+  padding-bottom: 1rem;
+}
+
+
+@media (max-width: 1000px) {
+  #recommend-container > .col-lg-6{
+    min-width: 65vw ;
+    /* background-color: lawngreen; */
+  }
+}
+
+@media (max-width: 750px) {
+  #recommend-container > .col-lg-6{
+    min-width: 90vw;
+    /* background-color: maroon; */
+  }
+}
+
 .category {
   font-weight: 900;
   margin-top: 3rem;
@@ -54,23 +89,38 @@
   margin-top: 1rem;
   box-shadow: 0 8px 16px 0 var(--headerBGColour);
   width: 100%;
+  border-radius: 3rem 0;
+  overflow: hidden;
 }
 
 .cardText {
   width: 70%;
   padding: 1rem 0px 0.5rem 2rem;
-  background-color: coral;
+  background-color: var(--cardBGColor);
+}
+
+.vegNonVeg{
+  background-color: white;
+  width: 2rem;
+  margin-right: .5rem;
+  font-weight: bold;
 }
 
 .cardImage {
-  background-color: darkgray;
   width: 30%;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .cardImage .imageBtn {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cardImage .imageBtn:hover {
+  transition: transform .5s ease;
+  transform: scale(1.3)
 }
 
 .imageBtn img {
@@ -78,21 +128,36 @@
   height: 100%;
 }
 
+
 .card-footer {
   cursor: pointer;
 }
 
-.angleAnimate {
-  animation: iconAnimate 1s ease infinite;
+.angleAnimateDown {
+  animation: iconAnimateDown 1s ease infinite;
 }
 
-@keyframes iconAnimate {
+@keyframes iconAnimateDown {
   0%,
   100% {
     transform: translateY(-2px);
   }
   75% {
     transform: translateY(5px);
+  }
+}
+
+.angleAnimateUp {
+  animation: iconAnimateUp 1s ease infinite;
+}
+
+@keyframes iconAnimateUp {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-2px);
   }
 }
 
@@ -163,20 +228,20 @@
 }
 
 .imageText {
-    position: relative;
-    object-fit: cover;
-  }
-  
-  /* Bottom right text */
-  .text-block {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: black;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  position: relative;
+  object-fit: cover;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 /* Image Carousel CSS END  */
 
 .footer {
@@ -184,9 +249,35 @@
   min-height: 3rem;
   color: var(--headerTxtColour);
   margin-top: 2rem;
+  padding: 2rem 0px;
 }
 
+/* Floating Action Button Style */
+.fab-container{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 999;
+  cursor: pointer;
+}
 
+.fab-icon-holder{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: var(--headerBGColour);
+  border-color: var(--headerTxtColour);
+}
 
-/* ------------ xxxxxxxxxxxxxxx TEST CSS */
+.fab-icon-holder i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.fab-icon-holder:hover{
+  transition: transform .5s ease;
+  transform: scale(1.2);
+}
 
