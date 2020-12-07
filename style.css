@@ -252,6 +252,14 @@
   padding: 2rem 0px;
 }
 
+.contact-ic:hover{
+  color: var(--headerTxtFocusColour) !important;
+  border-width: 1px;
+  border-color: var(--headerTxtFocusColour);
+  font-size: 1.1rem;
+  scale: 1.2;
+}
+
 /* Floating Action Button Style */
 .fab-container{
   position: fixed;
