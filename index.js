@@ -1,8 +1,8 @@
 // Load item template partial to containers
-$("#item-template-script-container").load("../partials/itemPartial.html")
+$("#item-template-script-container").load("partials/itemPartial.html")
 
 // Load Header html template to Navbar container
-$("#headerNavbar").load("../partials/headerPartial.html",
+$("#headerNavbar").load("partials/headerPartial.html",
   () => {
     const templateHTMLHeader = $("#header-template").html();
     const compliedHTMLHeader = Handlebars.compile(templateHTMLHeader);
@@ -16,7 +16,7 @@ function menuClick(){
 }
 
 // Load Footer html template to footer
-$("#footer").load("../partials/footerPartial.html")
+$("#footer").load("partials/footerPartial.html")
 
 
 
