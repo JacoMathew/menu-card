@@ -3,7 +3,7 @@ $("#item-template-script-container").load("partials/itemPartial.html")
 
 // Load Header html template to Navbar container
 $("#headerNavbar").load("partials/headerPartial.html",
-  () => {
+  function () {
     const templateHTMLHeader = $("#header-template").html();
     const compliedHTMLHeader = Handlebars.compile(templateHTMLHeader);
     const compliedObjectHeader = compliedHTMLHeader(_menu);

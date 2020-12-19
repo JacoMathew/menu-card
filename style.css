@@ -1,7 +1,7 @@
 :root {
   --headerBGColour: #221e2e;
   --headerTxtColour: #ff0000;
-  --cardBGColor: #fa8686;
+  --cardBGColor: #c4b3f7;
   --headerTxtFocusColour: #ecf6fd;
   --sectionPadding: 6vw;
 }
@@ -99,7 +99,7 @@
   background-color: var(--cardBGColor);
 }
 
-.vegNonVeg{
+.vegNonVegLogo{
   background-color: white;
   width: 2rem;
   margin-right: .5rem;
